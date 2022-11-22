@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- style link -->
+    <link rel="stylesheet" href="./style.css">
+
+    <title>fontSizeChange</title>
+</head>
+<body>
+    <div class="inputContainer" id="inputContainer">
+        <input type="text" id="inputTxt" placeholder="Enter a text"/>
+        <button class="btn" onclick="adding()">add</button>
+        <button class="btn" onclick="increase()">+</button>
+        <button class="btn" onclick="dicrease()">-</button>
+    </div>
+    <div class="altMessage" id="altMessage">Please Enter a valid message</div>
+    <div class="resultContainer" id="resultContainer">
+    </div>
+    <script>
+        let inputTxtEl = document.getElementById('inputTxt');
+        let inputContainerEl = document.getElementById('inputContainer');
+        let resultContainerEl = document.getElementById('resultContainer');
+        let fontSizeOfEl = 20;
+        let altMessageEl = document.getElementById('altMessage');
+
+        function adding(){
+            let inputTxtVl = inputTxtEl.value;
+            console.log(inputTxtVl);
+            if(!inputTxtVl){
+                altMessageEl.style.visibility = 'visible';
+                resultContainerEl.innerText = '';
+                console.log('it have no value')
+            }else{
+                resultContainerEl.innerText = inputTxtVl;
+                inputTxtEl.value = '';
+                altMessageEl.style.visibility = 'hidden';
+                console.log('it have value')
+            }
+        }
+
+        function increase(){
+            fontSizeOfEl += 2;
+            resultContainerEl.style.fontSize = `${fontSizeOfEl}px`;
+        }
+
+        function dicrease(){
+            fontSizeOfEl -= 2;
+            resultContainerEl.style.fontSize = `${fontSizeOfEl}px`;
+        }
+    </script>
+</body>
+</html>

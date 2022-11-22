@@ -1,0 +1,52 @@
+*,*::after,*::before{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(47, 47, 50);
+    min-width: 100vh;
+}
+
+.inputContainer{
+    display: flex;
+    justify-content: center;
+    height: 5rem;
+    align-items: center;
+}
+
+.btn{
+    width: 2.5rem;
+    height: 2rem;
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: 900;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid white;
+    background-color: rgb(47, 47, 50);
+    color: white;
+}
+
+input{
+    outline: none;
+    height: 2rem;
+    width: 50%;
+    padding-left: 5px;
+}
+
+.resultContainer{
+    color: white;
+    text-align: justify;
+    width: 80%;
+    margin: auto;
+    font-size: 20px;
+}
+
+.altMessage{
+    width: 80%;
+    margin: auto;
+    color: red;
+    visibility: hidden;
+}
