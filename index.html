@@ -29,16 +29,13 @@
 
         function adding(){
             let inputTxtVl = inputTxtEl.value;
-            console.log(inputTxtVl);
             if(!inputTxtVl){
                 altMessageEl.style.visibility = 'visible';
                 resultContainerEl.innerText = '';
-                console.log('it have no value')
             }else{
                 resultContainerEl.innerText = inputTxtVl;
                 inputTxtEl.value = '';
                 altMessageEl.style.visibility = 'hidden';
-                console.log('it have value')
             }
         }
 
